@@ -1,5 +1,6 @@
 import pandas as pd
-import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("FuelConsumption.csv")
 
@@ -49,6 +50,7 @@ train_x_poly = poly.fit_transform(train_x)
 
 clf = linear_model.LinearRegression()
 train_y_ = clf.fit(train_x_poly, train_y)
+
 from sklearn.metrics import r2_score
 
 test_x_poly = poly.fit_transform(test_x)
